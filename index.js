@@ -1,9 +1,8 @@
 import prompt from "readline-sync";
 import wordBank from "./word-bank.js";
-
 let wins = 0; 
-
 let losses = 0; 
+const rl = "readline-sync";
 
  const getRandomWord = () => { return wordBank[Math.floor(Math.random() * wordBank.length)]; }; 
  
@@ -54,7 +53,7 @@ let losses = 0;
          
     if (input.toLowerCase() === 'yes') { playGame(); } 
          
-         else if (input.toLowerCase() === 'no') { console.log("Wins: " + wins); console.log("Losses: " + losses); rl.close(); } 
+         else if (input.toLowerCase() === 'no') { console.log("Wins: " + wins); console.log("Losses: " + losses); "readline-sync".close(); } 
         
          else { console.log("Please enter 'yes' or 'no'."); playAgain(); } }); }; 
 
